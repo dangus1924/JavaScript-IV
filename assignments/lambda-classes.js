@@ -18,6 +18,40 @@ class Instructor extends Person {
         this.catchPhrase = base.catchPhrase;
     }
     demo() {
-        
+        return `Today we are learning about ${subject}.`
+    }
+
+    grade (student, subject) {
+        return `${student.name} receives a perfect score on ${subject}.`
     }
 }
+
+class student extends Person {
+    constructor(option) {
+        super(option);
+        this.previousBackground = option.previousBackground;
+        this.className = option.className;
+        this.favSubjects = option.favSubjects;
+
+    }
+    listsSubjects() {
+        return this.favSubjects;
+    }
+    PRAssignment() {
+        `${this.name} has submitted a PR for ${subject}`
+    }
+    sprintChallenge() {
+        `${this.name} has begun sprint challenge on ${subject}`
+    }
+};
+
+class PM extends Instructor {
+    constructor(pmOption) {
+        super(pmOption);
+        this.grandClassName = pmOption.grandClassName;
+        this.favInstructor = pmOption.favInstructor;
+    }
+    standUp() {
+        
+    }
+} 
