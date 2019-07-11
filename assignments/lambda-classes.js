@@ -52,6 +52,10 @@ class PM extends Instructor {
         this.favInstructor = pmOption.favInstructor;
     }
     standUp() {
-        
+      return `${this.name} announces to ${channel}, @channel standy times!`  
+    }
+    debugsCode() {
+        return `${this.name} debugs ${student.name}'s code on ${subject}`
     }
 } 
+
