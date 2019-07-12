@@ -24,7 +24,8 @@ class Instructor extends Person {
     grade (student, subject) {
         return `${student.name} receives a perfect score on ${subject}.`
     }
-}
+
+};
 
 class student extends Person {
     constructor(option) {
@@ -57,5 +58,23 @@ class PM extends Instructor {
     debugsCode() {
         return `${this.name} debugs ${student.name}'s code on ${subject}`
     }
-} 
+};
 
+const peter = new student({
+    name: 'Peter P. Askew',
+    age: 25,
+    location: 'Neptune, New Jersey',
+    previousBackground: 'Dog Walker',
+    className: 'JVPT8',
+    favSubjects: ['CSS', 'Java', 'Math']
+
+})
+
+let anton = new student ({
+    name: 'Anton Prefection',
+    age: 23,
+    location: 'Berlin, Germany',    
+    previousBackground: 'Producer',
+    className: 'JVPT8',
+    favSubjects: ['Bootstrap', 'CSS', 'jQuery']
+})
