@@ -24,6 +24,11 @@ class Instructor extends Person {
     grade (student, subject) {
         return `${student.name} receives a perfect score on ${subject}.`
     }
+    grading (student, max, min) {
+        max = 30;
+        min = -30;
+        return student.grade - Math.random() * (max-min) + max
+    }
 
 };
 
@@ -44,6 +49,7 @@ class student extends Person {
     sprintChallenge() {
         `${this.name} has begun sprint challenge on ${subject}`
     }
+    
 };
 
 class PM extends Instructor {
@@ -70,7 +76,7 @@ const peter = new student({
 
 })
 
-let anton = new student ({
+const anton = new student ({
     name: 'Anton Prefection',
     age: 23,
     location: 'Berlin, Germany',    
@@ -78,3 +84,64 @@ let anton = new student ({
     className: 'JVPT8',
     favSubjects: ['Bootstrap', 'CSS', 'jQuery']
 })
+
+const josh = new Instructor({
+    name: 'josh Paddle',
+    age: 39,
+    location: 'Churchhil, England',
+    specialty: 'best teacher ever',
+    favLanguage: 'javaScript',
+    catchPhrase: 'Practice makes perfect'
+})
+
+const pat = new Instructor({
+    name: 'Pat Winman',
+    age: 34,
+    location: 'British, England',
+    specialty: 'play video games',
+    favLanguage: 'java',
+    catchPhrase: 'Never give up, EVER!' 
+})
+
+const waldo = new Instructor({
+    name: 'Waldo Laster',
+    age: 30,
+    location: 'Ungo, England',
+    specialty: 'Pro TV watcher',
+    favLanguage: 'Python',
+    catchPhrase: 'When you run out of gas call AAA'
+})
+
+const james = new PM({
+    name: 'James Knight',
+    age: 45,
+    location: 'New York, England',
+    specialty: 'working out',
+    favLanguage: 'CSS',
+    catchPhrase: 'Watch me drive away',
+    grandClassName: 'JS4',
+    favInstructor: 'Timothy',
+})
+
+const marie = new PM({
+    name: 'Marie Lex',
+    age: 41,
+    location: 'New York, New York',
+    specialty: 'jogging',
+    favLanguage: 'HTML',
+    catchPhrase: 'I am short so what!',
+    grandClassName: 'JS1',
+    favInstructor: 'Andy',
+})
+
+console.log(anton)
+console.log(peter)
+console.log(josh)
+console.log(waldo)
+console.log(james)
+console.log(marie)
+console.log(pat)
+console.log(pat.age)
+console.log(james.location)
+console.log(waldo.specialty)
+console.log(anton.speak())
